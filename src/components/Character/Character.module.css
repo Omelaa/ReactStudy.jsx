@@ -1,0 +1,12 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+.info {
+    border: 1px solid #000000;
+    padding: 5px;
+}

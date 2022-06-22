@@ -1,0 +1,9 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 25px;
+    border: 2px dotted #000000;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+}
