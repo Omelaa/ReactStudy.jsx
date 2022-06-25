@@ -1,0 +1,22 @@
+
+.space{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 25px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 10px;
+    flex: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+
+}
+
+.info{
+    display: flex;
+    width: 410px;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 0 10px;
+    border-right: 2px solid #000;
+}
