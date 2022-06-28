@@ -1,9 +1,8 @@
-import {baseURL, urls} from "../constants";
-import {fetchService} from "./fetch.service";
+import {urls} from "../constants";
+import {axiosService} from "./axios.service";
 
 const userService = {
-    getAll: () => fetchService(baseURL, urls.users, 'get'),
-    getById: (id) => fetchService(baseURL, `${urls.users}/${id}`, 'get')
+    getAll: () => axiosService(urls.users),
 };
 
 export {userService};

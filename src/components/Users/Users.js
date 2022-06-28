@@ -10,7 +10,7 @@ const Users = ({getUserById}) => {
 
     useEffect(() => {
         try {
-            userService.getAll().then(res => res.json()).then(items => setUsers(items));
+            userService.getAll().then(({data}) => setUsers(data));
         } catch (e) {
             alert('Щось пішло не так :(');
         }

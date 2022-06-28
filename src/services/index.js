@@ -1,3 +1,3 @@
-export * from './fetch.service';
 export * from './user.service';
-export * from './space.service';
+export * from './post.service';
+export * from './axios.service';
