@@ -3,7 +3,7 @@ import {urls} from "../constants";
 
 
 const postService = {
-    getById: (id) => axiosService(`${urls.posts}?userId=${id}`)
+    getById: (id) => axiosService.get(`${urls.posts}?userId=${id}`)
 };
 
 export {postService};
