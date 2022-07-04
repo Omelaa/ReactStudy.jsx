@@ -1,0 +1,39 @@
+
+
+.posts{
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    grid-gap: 5px;
+}
+
+input{
+    padding: 10px 20px;
+    border: none;
+    border-top: 2px solid #ffa448;
+    border-bottom: 2px solid #ffa448;
+    border-radius: 15px;
+    outline: none;
+    transition: 0.5s opacity;
+}
+
+button{
+    background-color: #ffffff;
+    border: none;
+    border-top: 2px solid #ffa448;
+    border-bottom: 2px solid #ffa448;
+    border-radius: 15px;
+    color: #ffa448;
+    font-size: 16px;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: 0.5s opacity;
+}
+
+button:hover,
+input:hover{
+    opacity: 0.5;
+}

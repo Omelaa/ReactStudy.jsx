@@ -1,9 +1,10 @@
-import {baseURL, urls} from "../constants";
-import {fetchService} from "./fetch.service";
+import {axiosService} from "./axios.service";
+
+import {urls} from "../constants";
+
 
 const userService = {
-    getAll: () => fetchService(baseURL, urls.users, 'get'),
-    getById: (id) => fetchService(baseURL, `${urls.users}/${id}`, 'get')
+    postUser: (user) => axiosService.post(urls.users, user)
 };
 
 export {userService};

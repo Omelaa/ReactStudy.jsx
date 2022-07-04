@@ -1,9 +1,8 @@
-const baseURL = process.env.REACT_APP_API_JSON;
-const spaceUrl = process.env.REACT_APP_API_SPACEX;
+const baseURL = process.env.REACT_APP_API;
 
 const urls = {
     users: '/users',
-    launches: '/v3/launches'
+    posts: '/posts'
 };
 
-export {baseURL, spaceUrl, urls};
+export {baseURL, urls};
