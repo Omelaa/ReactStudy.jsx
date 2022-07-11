@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+    grid-gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.link {
+    transition: 0.5s opacity;
+}
+
+.link:hover {
+    opacity: 0.5;
+}

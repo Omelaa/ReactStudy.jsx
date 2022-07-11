@@ -1,7 +1,22 @@
+import {Route, Routes} from 'react-router-dom';
+
+import {MainLayout} from "./layout/MainLayout/MainLayout";
+import {AlbumsPage, CommentsPage, PostsPage, TodosPage} from "./pages";
+
 const App = () => {
     return (
         <div>
-            App
+            <Routes>
+                <Route path={'/'} element={<MainLayout/>}>
+                    <Route path={'todos'} element={<TodosPage/>}/>
+                    <Route path={'albums'} element={<AlbumsPage/>}/>
+                    <Route path={'comments'} element={<CommentsPage/>}>
+                        <Route path={':id'} element={<PostsPage/>}>
+
+                        </Route>
+                    </Route>
+                </Route>
+            </Routes>
         </div>
     );
 };
