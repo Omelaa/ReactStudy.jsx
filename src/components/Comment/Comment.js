@@ -1,14 +1,17 @@
-import {NavLink, useParams} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
-const Comment = ({comment: {name, email, body}}) => {
-    const {id} = useParams();
-    console.log(id);
+const Comment = ({comment: {id, postId, name, body}}) => {
     return (
-        <div>
-            <h3>{name}</h3>
-            <p>{body}</p>
-            <NavLink to={`/posts`}>click</NavLink>
-        </div>
+        <>
+            <div>
+                <h3>{id}. {name}</h3>
+                <p>{body}</p>
+                <button>
+                    <NavLink to={postId.toString()}>get post</NavLink>
+                </button>
+            </div>
+            <hr/>
+        </>
     );
 };
 

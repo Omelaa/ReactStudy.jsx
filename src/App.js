@@ -1,7 +1,7 @@
 import {Route, Routes} from 'react-router-dom';
 
 import {MainLayout} from "./layout/MainLayout/MainLayout";
-import {AlbumsPage, CommentsPage, PostsPage, TodosPage} from "./pages";
+import {AlbumsPage, CommentsPage, PostPage, TodosPage} from "./pages";
 
 const App = () => {
     return (
@@ -11,7 +11,7 @@ const App = () => {
                     <Route path={'todos'} element={<TodosPage/>}/>
                     <Route path={'albums'} element={<AlbumsPage/>}/>
                     <Route path={'comments'} element={<CommentsPage/>}>
-                        <Route path={':id'} element={<PostsPage/>}>
+                        <Route path={':id'} element={<PostPage/>}>
 
                         </Route>
                     </Route>

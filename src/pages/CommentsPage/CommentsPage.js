@@ -4,23 +4,35 @@ import css from '../../layout/MainLayout/MainLayout.module.css'
 
 import {commentService} from "../../services";
 import {Comment} from "../../components";
+import {Outlet, useParams} from "react-router-dom";
 
 const CommentsPage = () => {
-    const [comments, setAlbums] = useState([]);
+    const [comments, setComments] = useState([]);
+    const {id} = useParams();
+
     useEffect(() => {
         async function commentsFetch() {
             try {
                 const {data} = await commentService.getAll();
-                setAlbums(data);
+                setComments(data);
             } catch (e) {
                 alert("Не вдалося загрузити comments :(");
             }
         }
+
         commentsFetch();
     }, []);
+
     return (
-        <div className={css.wrapper}>
-            {comments.map(comment => <Comment key={comment.id} comment={comment}/>)}
+        <div style={{display: "flex"}}>
+            <div className={css.comments}>
+                {comments.map(comment => <Comment key={comment.id} comment={comment}/>)}
+            </div>
+            {id ?
+                <Outlet/>
+                :
+                <h3 style={{padding: '15px'}}>Виберіть коментар щоб побачити його пости</h3>
+            }
         </div>
     );
 };
