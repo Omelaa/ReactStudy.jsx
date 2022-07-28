@@ -1,8 +1,8 @@
 import {FC, ReactNode} from "react";
-import {useDispatch} from "react-redux";
 
-import {carActions} from "../../redux";
 import {ICar} from "../../interfaces";
+import {carActions} from "../../redux";
+import {useAppDispatch} from "../../hooks";
 
 interface ICarProps {
     car: ICar;
@@ -10,7 +10,7 @@ interface ICarProps {
 }
 
 const Car: FC<ICarProps> = ({car, car: {id, model, price, year}}) => {
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     const getCarId = async (carId:number) => {
         await dispatch(carActions.deleteCar(carId));

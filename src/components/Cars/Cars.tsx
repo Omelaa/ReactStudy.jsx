@@ -2,7 +2,7 @@ import {FC, useEffect} from "react";
 
 import {Car} from "../Car/Car";
 import {carActions} from "../../redux";
-import {useAppDispatch, useAppSelector} from "../../hooks/redux";
+import {useAppDispatch, useAppSelector} from "../../hooks";
 
 const Cars:FC = () => {
     const {cars, isLoading} = useAppSelector(state => state.cars);
@@ -11,6 +11,7 @@ const Cars:FC = () => {
     useEffect(() => {
         dispatch(carActions.getAll());
     }, [dispatch]);
+    console.log(cars);
     return (
         <div>
             {isLoading ?

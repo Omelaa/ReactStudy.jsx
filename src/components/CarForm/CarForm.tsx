@@ -1,12 +1,12 @@
 import {FC, useEffect} from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
 
-import {carActions} from "../../redux";
-import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {ICar} from "../../interfaces";
+import {carActions} from "../../redux";
+import {useAppDispatch, useAppSelector} from "../../hooks";
 
 const CarForm: FC = () => {
-    const {register, handleSubmit, setValue, reset} = useForm();
+    const {register, handleSubmit, setValue, reset} = useForm<ICar>();
     const {carForUpdate} = useAppSelector(state => state.cars);
     const dispatch = useAppDispatch();
 

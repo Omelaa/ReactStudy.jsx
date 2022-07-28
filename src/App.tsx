@@ -1,7 +1,8 @@
+import {FC} from "react";
+
 import {CarForm, Cars} from "./components";
 
 import css from './App.module.css';
-import {FC} from "react";
 
 const App: FC = () => {
     return (

@@ -1,7 +1,8 @@
+import {AxiosError} from "axios";
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+
 import {ICar} from "../../interfaces";
 import {carService} from "../../services";
-import {AxiosError} from "axios";
 
 type CarState = {
     cars: ICar[];
@@ -88,7 +89,7 @@ const carSlice = createSlice({
                 state.cars = action.payload;
             })
             .addCase(getAll.rejected, (state, action) => {
-                state.isError = action.payload;
+                state.isError = action.payload as any;
             })
             .addCase(updateNewCar.fulfilled, (state, action) => {
                 const currentCar = state.cars.find(car => car.id === action.payload);
